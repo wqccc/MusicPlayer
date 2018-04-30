@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+tools:context="com.example.bupt.musicplayer.MainActivity">
+
+<ListView
+    android:id="@+id/listView"
+    android:dividerHeight="0.5dp"
+    android:divider="#FFF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_above="@+id/playMsg"></ListView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true"
+    android:paddingBottom="1dp"
+    android:id="@+id/playMsg">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:id="@+id/musicImg"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="4"
+        android:id="@+id/musicUiInfo"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:id="@+id/musicTitle" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:id="@+id/musicArtist"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:id="@+id/previous"
+        android:src="@drawable/previous_icon"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:id="@+id/play"
+        android:src="@drawable/play"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:id="@+id/next"
+        android:src="@drawable/next_icon"/>
+</LinearLayout>
+</RelativeLayout>
